@@ -73,8 +73,38 @@ To https://github.com/knotknull/brancy.git
  * [new branch]      BigNotesBranch -> BigNotesBranch
 
 7. Checkout different branches:
-> git checkout master && ls 
-> git checkout NotesBranch && ls 
-> git checkout BitNotesBranch && ls 
+> git checkout master && ls -l			## NOTE: No notes files this branch (3 files)
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+map@hexagon:/brancy/> ls -ltr
+total 12
+-rw-r--r-- 1 map map   36 Jun  8 19:40 README.md
+-rwxr-xr-x 1 map map  402 Jun  8 19:42 file_iter.py
+-rw-r--r-- 1 map map 3987 Jun  8 19:42 bump.py
 
+> git checkout NotesBranch && ls -l 		## NOTE: Notes.txt in this branch (4 files)
+Switched to branch 'NotesBranch'
+map@hexagon:/brancy/> ls -l
+total 16
+-rw-r--r-- 1 map map 3987 Jun  8 19:42 bump.py
+-rwxr-xr-x 1 map map  402 Jun  8 19:42 file_iter.py
+-rw-r--r-- 1 map map 2335 Jun  8 20:13 Notes.txt
+-rw-r--r-- 1 map map   36 Jun  8 19:40 README.md
+
+> git checkout BitNotesBranch && ls -l 		## NOTE: NOTES.TXT in this branch (4 files)
+Switched to branch 'BigNotesBranch'
+map@hexagon:/brancy/> ls -l
+total 12
+-rw-r--r-- 1 map map 3987 Jun  8 19:42 bump.py
+-rwxr-xr-x 1 map map  402 Jun  8 19:42 file_iter.py
+-rw-r--r-- 1 map map    0 Jun  8 20:13 NOTES.TXT
+-rw-r--r-- 1 map map   36 Jun  8 19:40 README.md
+
+8. Create a dummy branch to delete
+> git checkout master
+> git checkout -b DummyBranch
+> touch dummy_file 
+> git add  dummy_file 
+> git commit -m "Added dummy_file" 
+> git push origin DummyBranch
 
