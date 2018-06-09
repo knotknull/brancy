@@ -45,4 +45,14 @@ Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/knotknull/brancy.git
  * [new branch]      NotesBranch -> NotesBranch
 
-5. Add the new file, commit and push 
+5. Go to github.com and look for brancy repo, there is two branches: master and NotesBranch 
+NOTE: NotesBranch has an extra file, Notes.txt
+
+
+6. Create a new branch from master and add a new file called NOTES.txt (branch == BigNotesBranch)
+> git checkout master
+> git checkout -b BigNotesBranch
+> touch NOTES.TXT
+> git add NOTES.TXT
+> git commit -m "Adding NOTES.TXT to new branch BigNotesBranch
+> git push origin BigNotesBranch
