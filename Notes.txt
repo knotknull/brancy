@@ -108,3 +108,11 @@ total 12
 > git commit -m "Added dummy_file" 
 > git push origin DummyBranch
 
+9. Delete dummy branch		NOTE: Since you can't delete the branch you are locally on, 
+                                      switch to master then delete and push
+> git branch
+> git checkout master 
+> git branch
+> git branch -D DummyBranch	## NOTE: This deletes the local branch
+> git branch
+> git push origin :DummyBranch  ## NOTE: This pushes the "delete" to github 
