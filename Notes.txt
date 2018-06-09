@@ -51,8 +51,30 @@ NOTE: NotesBranch has an extra file, Notes.txt
 
 6. Create a new branch from master and add a new file called NOTES.txt (branch == BigNotesBranch)
 > git checkout master
+Switched to a new branch 'BigNotesBranch'
+
 > git checkout -b BigNotesBranch
+
 > touch NOTES.TXT
+
 > git add NOTES.TXT
+[BigNotesBranch 157ca33] Added NOTES.TXT to BigNotesBranch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 NOTES.TXT
+
 > git commit -m "Adding NOTES.TXT to new branch BigNotesBranch
 > git push origin BigNotesBranch
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 371 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/knotknull/brancy.git
+ * [new branch]      BigNotesBranch -> BigNotesBranch
+
+7. Checkout different branches:
+> git checkout master && ls 
+> git checkout NotesBranch && ls 
+> git checkout BitNotesBranch && ls 
+
+
