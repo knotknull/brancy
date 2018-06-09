@@ -111,8 +111,34 @@ total 12
 9. Delete dummy branch		NOTE: Since you can't delete the branch you are locally on, 
                                       switch to master then delete and push
 > git branch
+  BigNotesBranch
+  DummyBranch
+* NotesBranch
+  master
+
 > git checkout master 
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
 > git branch
+  BigNotesBranch
+  DummyBranch
+  NotesBranch
+* master
+
 > git branch -D DummyBranch	## NOTE: This deletes the local branch
+Deleted branch DummyBranch (was 815d82c).
+
 > git branch
+  BigNotesBranch
+  NotesBranch
+* master
+
 > git push origin :DummyBranch  ## NOTE: This pushes the "delete" to github 
+To https://github.com/knotknull/brancy.git
+ - [deleted]         DummyBranch
+
+> git branch
+  BigNotesBranch
+  NotesBranch
+* master
